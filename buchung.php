@@ -36,6 +36,7 @@ Informieren Sie sich doch einfach unverbindlich ob zu ihrem Wuschtermin unsere
 Ferienwohnung noch verfügbar ist.
 </p>
 	<!-- Starte Formular required TODO <button type="button" onclick="myFunction()">Date</button>-->
+<p>
 	<form action="index.php?section=buchungsanfrage" method="POST">
 		<table>
 			<tr>
@@ -88,6 +89,7 @@ Ferienwohnung noch verfügbar ist.
 			</tr>
 		</table>
 	</form>
+</p>
 		
 	<?php
 	}

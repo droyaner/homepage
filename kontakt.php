@@ -19,7 +19,7 @@
 		<br>
 		Wir würden uns freuen Sie als unsere Gäste begrüßen zu dürfen.
 		<br>
-		<a href="pdf_server.php?file=Flyer.pdf"><b>Download Flyer</b></a>
+		<a href="pdf_server.php?file=Flyer.pdf"><b>Download Flyer.pdf (0.4 MB)</b></a>
 		<br>
 		<br>
 		<br>

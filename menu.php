@@ -11,6 +11,7 @@
 	     echo ' <li><a href="index.php?section=freizeit">Freizeit</a></li>';
 	     echo ' <li><a href="index.php?section=anfahrt">Anfahrt</a></li>';
 	     echo ' <li><a href="index.php?section=preise">Preise</a></li>';
+	     echo ' <li><a href="index.php?section=buchungsanfrage">Buchen</a></li>';
 	     echo ' <li><a href="index.php?section=kontakt">Kontakt</a></li>';
 	}
 	elseif($section == "wohnung")
@@ -22,6 +23,7 @@
 	     echo ' <li><a href="index.php?section=freizeit">Freizeit</a></li>';
 	     echo ' <li><a href="index.php?section=anfahrt">Anfahrt</a></li>';
 	     echo ' <li><a href="index.php?section=preise">Preise</a></li>';
+	     echo ' <li><a href="index.php?section=buchungsanfrage">Buchen</a></li>';
 	     echo ' <li><a href="index.php?section=kontakt">Kontakt</a></li>';
 
 	}
@@ -35,6 +37,7 @@
 
 	     echo ' <li><a href="index.php?section=anfahrt">Anfahrt</a></li>';
 	     echo ' <li><a href="index.php?section=preise">Preise</a></li>';
+	     echo ' <li><a href="index.php?section=buchungsanfrage">Buchen</a></li>';
 	     echo ' <li><a href="index.php?section=kontakt">Kontakt</a></li>';
 
 	}
@@ -48,6 +51,7 @@
 	     echo '<li id="active"><a href="index.php?section=anfahrt" id="current">Anfahrt</a></li>';
 
 	     echo ' <li><a href="index.php?section=preise">Preise</a></li>';
+	     echo ' <li><a href="index.php?section=buchungsanfrage">Buchen</a></li>';
 	     echo ' <li><a href="index.php?section=kontakt">Kontakt</a></li>';
 
 	}
@@ -61,6 +65,21 @@
 
 	     echo '<li id="active"><a href="index.php?section=preise" id="current">Preise</a></li>';
 
+	     echo ' <li><a href="index.php?section=buchungsanfrage">Buchen</a></li>';
+	     echo ' <li><a href="index.php?section=kontakt">Kontakt</a></li>';
+
+	}
+
+	elseif($section == "buchungsanfrage")
+	{
+	     echo ' <li><a href="index.php?section=startseite">Startseite</a></li>';
+	     echo ' <li><a href="index.php?section=wohnung">Wohnung</a></li>';
+	     echo ' <li><a href="index.php?section=freizeit">Freizeit</a></li>';
+	     echo ' <li><a href="index.php?section=anfahrt">Anfahrt</a></li>';
+	     echo ' <li><a href="index.php?section=preise">Preise</a></li>';
+	     echo '<li id="active"><a href="index.php?section=buchungsanfrage" id="current">Buchen</a></li>';
+
+
 	     echo ' <li><a href="index.php?section=kontakt">Kontakt</a></li>';
 
 	}
@@ -72,6 +91,7 @@
 	     echo ' <li><a href="index.php?section=freizeit">Freizeit</a></li>';
 	     echo ' <li><a href="index.php?section=anfahrt">Anfahrt</a></li>';
 	     echo ' <li><a href="index.php?section=preise">Preise</a></li>';
+	     echo ' <li><a href="index.php?section=buchungsanfrage">Buchen</a></li>';
 
 	     echo '<li id="active"><a href="index.php?section=kontakt" id="current">Kontakt</a></li>';
 

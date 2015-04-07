@@ -6,7 +6,7 @@
 <div id="content">
 	<h1>Herzlich Willkommen in Pappenheim</h1>
 	<p>
-		Wir vermieten eine gemütliche <b>vier Sterne Komfort-Ferienwohnung</b> im idyllisch gelegenen Luftkurort 
+		asdfWir vermieten eine gemütliche <b>vier Sterne Komfort-Ferienwohnung</b> im idyllisch gelegenen Luftkurort 
 		<a href="http://www.pappenheim.de/Events.228+M54a708de802.0.html" title="Starseite der Stadt Pappenheim">Pappenheim</a> 
 	  	im Naturpark Altmühltal nahe dem fränkischen Seenland.
 	  	Erholen Sie sich in mitten in der Natur oder nehmen Sie an dem umfangreichen Freizeitangebot in und um Pappenheim teil. 

@@ -1,0 +1,8 @@
+<?xml version='1.0'?>  
+<images>  
+   <image id='001'>  
+      <url>./img/freizeit/001.jpg</url>  
+      <resize>./img/freizeit/resize/001.jpg</resize>
+      <text>"Ich bin ein Beispieltext"</text>
+   </image>  
+</images>  

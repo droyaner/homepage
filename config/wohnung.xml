@@ -1,0 +1,48 @@
+<?xml version='1.0'?>  
+<images>  
+   <image id='001'>  
+      <url>./img/wohnung/001.jpg</url>  
+      <resize>./img/wohnung/resize/001.jpg</resize>
+      <text>"Herzlich Willkommen"</text>
+   </image>  
+   <image id='002'>  
+      <url>./img/wohnung/002.jpg</url>  
+      <resize>./img/wohnung/resize/002.jpg</resize>
+      <text>"Infozentrum"</text>  
+   </image> 
+   <image id='003'>  
+      <url>./img/wohnung/003.jpg</url>  
+      <resize>./img/wohnung/resize/003.jpg</resize>
+      <text>"Eingangsbereich"</text>  
+   </image>  
+   <image id='004'>  
+      <url>./img/wohnung/004.jpg</url>  
+      <resize>./img/wohnung/resize/004.jpg</resize>
+      <text>"Wohnzimmer"</text>  
+   </image>  
+   <image id='005'>  
+      <url>./img/wohnung/005.jpg</url>  
+      <resize>./img/wohnung/resize/005.jpg</resize>
+      <text>"Wohnzimmer Sitzecke"</text>  
+   </image>  
+   <image id='006'>  
+      <url>./img/wohnung/006.jpg</url>  
+      <resize>./img/wohnung/resize/006.jpg</resize>
+      <text>"Schlafzimmer"</text>  
+   </image>  
+   <image id='007'>  
+      <url>./img/wohnung/007.jpg</url>  
+      <resize>./img/wohnung/resize/007.jpg</resize>
+      <text>"Wohnküche"</text>  
+   </image>  
+   <image id='008'>  
+      <url>./img/wohnung/008.jpg</url>  
+      <resize>./img/wohnung/resize/008.jpg</resize>
+      <text>"Essgruppe in Wohnküche"</text>  
+   </image>  
+   <image id='009'>  
+      <url>./img/wohnung/009.jpg</url>  
+      <resize>./img/wohnung/resize/009.jpg</resize>
+      <text>"Badezimmer"</text>  
+   </image>  
+</images>  

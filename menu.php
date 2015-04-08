@@ -107,6 +107,7 @@
 	     echo ' <li><a href="index.php?section=freizeit">Freizeit</a></li>';
 	     echo ' <li><a href="index.php?section=anfahrt">Anfahrt</a></li>';
 	     echo ' <li><a href="index.php?section=preise">Preise</a></li>';
+	     echo ' <li><a href="index.php?section=buchungsanfrage">Buchen</a></li>';
 	     echo ' <li><a href="index.php?section=kontakt">Kontakt</a></li>';
 	}
 

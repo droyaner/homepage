@@ -20,12 +20,13 @@
 			<br>
 			- Parkmöglichkeit direkt vor dem Haus
     </p>
+	<!-- Start genarating Gallery -->
 	<section id="examples" class="examples-section">
 		<div class="container">
 			<div class="image-row">
 				<div class="image-set">
 					<?php 
-					$xmlFile = './config.xml'; 
+					$xmlFile = './config/wohnung.xml'; 
 
 						if (file_exists($xmlFile)) { 
 						    $xml = simplexml_load_file($xmlFile); 
@@ -47,5 +48,6 @@
 				</div>
 			</div>
 		</section>
+	<!-- End genarating Gallery -->
 
   </div>

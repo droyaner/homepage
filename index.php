@@ -27,8 +27,11 @@
 	<meta http-equiv="expires" content="Mon, 05 Apr 2015 00:00:00 GMT">
 	<meta name="revisit-after" CONTENT="7 days">
 
-</head>
+<!-- Kalender -->
+<script type="text/javascript" src="view.js"></script>
+<script type="text/javascript" src="calendar.js"></script>
 
+<!-- Gallery -->
  <script src="js/jquery-1.11.0.min.js"></script>
         <script src="js/lightbox.js"></script>
 

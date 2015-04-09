@@ -20,34 +20,7 @@
 			<br>
 			- Parkmöglichkeit direkt vor dem Haus
     </p>
-	<!-- Start genarating Gallery -->
-	<section id="examples" class="examples-section">
-		<div class="container">
-			<div class="image-row">
-				<div class="image-set">
-					<?php 
-					$xmlFile = './config/wohnung.xml'; 
-
-						if (file_exists($xmlFile)) { 
-						    $xml = simplexml_load_file($xmlFile); 
-
-						    foreach ( $xml->image as $user )   
-							{   
-							  $text = $user->text;
-							  $url = $user->url;	
-							  $urlResize = $user->resize;
-							  echo ' <a class="example-image-link" href= '.$url.' data-lightbox="example-set" data-title= '.$text.' ><img class="example-image" src= '.$urlResize.'  alt=""/></a>';
-						    
-							}   
-							 
-						} else { 
-						    exit("Datei $xmlFile kann nicht geöffnet werden."); 
-						} 
-						?>
-					</div>
-				</div>
-			</div>
-		</section>
-	<!-- End genarating Gallery -->
-
+  	<?php include("gallery.php"); 
+		generateLightBoxGallery ("config/wohnung.xml");
+	?>
   </div>

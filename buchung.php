@@ -2,9 +2,54 @@
 <div id="content">
 
 <h1>Buchungsanfrage</h1>
-<p>
-	Stellen Sie einfach eine unverbindliche Buchungsanfrage.
-</p>
+	
+<?php
+
+	$timestamp = time();
+	$datum = date("d.m.Y",$timestamp);
+	$uhrzeit = date("H:i",$timestamp);
+
+	if(isset($_POST["submit"]) || isset($_POST["reset"])){
+		echo "<p> 
+			Vielen dank für ihr Interesse an unserer Ferienwohung.
+			Ihre Anfrage wird bearbeitet.
+			
+			</p>";
+		//Daten auswerten
+		$empfaenger = "Droyaner@gmx.de"; //Mailadresse
+		$betreff    = "Buchungsanfrage: $nachname, $vorname, $datum";
+		$mailtext   = "Buchungsanfrage | $uhrzeit $datum \n 
+				\n
+				Kontaktdaten:
+				Vorname: $vorname \n
+				Nachname: $nachname \n
+				Telefon: $telefon \n
+				Email: $email \n
+				\n
+				$StrHausnummer \n
+				$AdressZusatz \n
+				$stadt \n
+				$bundesland \n
+				$plz \n
+				$land \n
+				\n
+				Zeitraum:
+				Anreisedatum: $TT1 $MM1 $JJJJ1 \n
+				Abreisedatum: $TT1 $MM1 $JJJJ1 \n
+				\n
+				$anmerkung \n
+				";
+		//$antwortan  = "ich@versuchsratte.de";
+ 
+		mail( $empfaenger,
+      		$betreff,
+      		$mailtext);
+      		//"From: $absEmail\nReply-To: $antwortan");
+	}else{
+?>
+	<p>
+		Stellen Sie einfach eine unverbindliche Buchungsanfrage.
+	</p>
 
 
 	<div id="form_container">
@@ -20,31 +65,31 @@
 					<li id="li_1" >
 		<label class="description" for="element_1">Name </label>
 		<span>
-			<input id="element_1_1" name= "element_1_1" class="element text" maxlength="255" size="14" value=""/>
+			<input id="element_1_1" name= "vorname" class="element text" maxlength="255" size="14" value=""required/>
 			<label>Vorname</label>
 		</span>
 		<span>
-			<input id="element_1_2" name= "element_1_2" class="element text" maxlength="255" size="14" value=""/>
+			<input id="element_1_2" name= "nachname" class="element text" maxlength="255" size="14" value=""required/>
 			<label>Nachname</label>
 		</span> 
 
 		</li>		<li id="li_6" >
 		<label class="description" for="element_6">Anreisedatum </label>
 		<span>
-			<input id="element_6_1" name="element_6_1" class="element text" size="2" maxlength="2" value="" type="text"> /
+			<input id="element_6_2" name="TT1" class="element text" size="2" maxlength="2" value="" type="text"required> /
+			<label for="element_6_2">TT</label>
+		</span>
+		<span>
+			<input id="element_6_1" name="MM1" class="element text" size="2" maxlength="2" value="" type="text"required> /
 			<label for="element_6_1">MM</label>
 		</span>
 		<span>
-			<input id="element_6_2" name="element_6_2" class="element text" size="2" maxlength="2" value="" type="text"> /
-			<label for="element_6_2">DD</label>
-		</span>
-		<span>
-	 		<input id="element_6_3" name="element_6_3" class="element text" size="4" maxlength="4" value="" type="text">
-			<label for="element_6_3">YYYY</label>
+	 		<input id="element_6_3" name="JJJJ1" class="element text" size="4" maxlength="4" value="" type="text"required>
+			<label for="element_6_3">JJJJ</label>
 		</span>
 	
 		<span id="calendar_6">
-			<img id="cal_img_6" class="datepicker" src="calendar.gif" alt="Pick a date.">	
+			<img id="cal_img_6" class="datepicker" src="img/calendar.gif" alt="Pick a date.">	
 		</span>
 		<script type="text/javascript">
 			Calendar.setup({
@@ -60,20 +105,20 @@
 		</li>		<li id="li_7" >
 		<label class="description" for="element_7">Abreisedatum </label>
 		<span>
-			<input id="element_7_1" name="element_7_1" class="element text" size="2" maxlength="2" value="" type="text"> /
+			<input id="element_7_2" name="TT2" class="element text" size="2" maxlength="2" value="" type="text"required> /
+			<label for="element_7_2">TT</label>
+		</span>
+		<span>
+			<input id="element_7_1" name="MM2" class="element text" size="2" maxlength="2" value="" type="text"required> /
 			<label for="element_7_1">MM</label>
 		</span>
 		<span>
-			<input id="element_7_2" name="element_7_2" class="element text" size="2" maxlength="2" value="" type="text"> /
-			<label for="element_7_2">DD</label>
-		</span>
-		<span>
-	 		<input id="element_7_3" name="element_7_3" class="element text" size="4" maxlength="4" value="" type="text">
-			<label for="element_7_3">YYYY</label>
+	 		<input id="element_7_3" name="JJJJ2" class="element text" size="4" maxlength="4" value="" type="text"required>
+			<label for="element_7_3">JJJJ</label>
 		</span>
 	
 		<span id="calendar_7">
-			<img id="cal_img_7" class="datepicker" src="calendar.gif" alt="Pick a date.">	
+			<img id="cal_img_7" class="datepicker" src="img/calendar.gif" alt="Pick a date.">	
 		</span>
 		<script type="text/javascript">
 			Calendar.setup({
@@ -89,45 +134,45 @@
 		</li>		<li id="li_2" >
 		<label class="description" for="element_2">Telefon </label>
 		<div>
-			<input id="element_2" name="element_2" class="element text medium" type="text" maxlength="255" value=""/> 
+			<input id="element_2" name="telefon" class="element text medium" type="text" maxlength="255" value=""required/> 
 		</div> 
 		</li>		<li id="li_3" >
 		<label class="description" for="element_3">Email </label>
 		<div>
-			<input id="element_3" name="element_3" class="element text medium" type="text" maxlength="255" value=""/> 
+			<input id="element_3" name="email" class="element text medium" type="text" maxlength="255" value=""/> 
 		</div> 
 		</li>		<li id="li_4" >
-		<label class="description" for="element_4">Adress </label>
+		<label class="description" for="element_4">Adresse </label>
 		
 		<div>
-			<input id="element_4_1" name="element_4_1" class="element text large" value="" type="text">
+			<input id="element_4_1" name="StrHausnummer" class="element text large" value="" type="text">
 			<!--<label for="element_4_1">Street Address</label>-->
 			<label for="element_4_1">Straße und Hausnummer</label>
 		</div>
 	
 		<div>
-			<input id="element_4_2" name="element_4_2" class="element text large" value="" type="text">
+			<input id="element_4_2" name="AdressZusatz" class="element text large" value="" type="text">
 			<!--<label for="element_4_2">Address Line 2</label>-->
-			<label for="element_4_2">Address Line 2</label>
+			<label for="element_4_2">Adresszusatz</label>
 		</div>
 	
 		<div class="left">
-			<input id="element_4_3" name="element_4_3" class="element text medium" value="" type="text">
+			<input id="element_4_3" name="stadt" class="element text medium" value="" type="text">
 			<label for="element_4_3">Stadt</label>
 		</div>
 	
 		<div class="right">
-			<input id="element_4_4" name="element_4_4" class="element text medium" value="" type="text">
+			<input id="element_4_4" name="bundesland" class="element text medium" value="" type="text">
 			<label for="element_4_4">Bundeslande </label>
 		</div>
 	
 		<div class="left">
-			<input id="element_4_5" name="element_4_5" class="element text medium" maxlength="15" value="" type="text">
+			<input id="element_4_5" name="plz" class="element text medium" maxlength="15" value="" type="text">
 			<label for="element_4_5">PLZ </label>
 		</div>
 	
 		<div class="right">
-			<select class="element select medium" id="element_4_6" name="element_4_6"> 
+			<select class="element select medium" id="element_4_6" name="land"> 
 			<option value="" selected="selected"></option>
 <option value="Afghanistan" >Afghanistan</option>
 <option value="Albania" >Albania</option>
@@ -331,7 +376,7 @@
 		</li>		<li id="li_5" >
 		<label class="description" for="element_5">Anmerkung </label>
 		<div>
-			<textarea id="element_5" name="element_5" class="element textarea medium"></textarea> 
+			<textarea id="element_5" name="anmerkung" class="element textarea medium"></textarea> 
 		</div> 
 		</li>
 			
@@ -339,8 +384,12 @@
 			    <input type="hidden" name="form_id" value="995602" />
 			    
 				<input id="saveForm" class="button_text" type="submit" name="submit" value="Senden" />
+				<input id="saveForm" class="button_text" type="reset" name="reset" value="Zurücksetzen" />
 		</li>
 			</ul>
 		</form>	
 	</div>
+	<?php
+	}
+	?>
 </div>

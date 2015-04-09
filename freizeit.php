@@ -7,35 +7,9 @@
 		Augustiner Kloster (1372), ev. Stadtkirche(1476),  Altes Schloss (1588) und Judenfriedhof (12. Jhd.). 
 	</p>
 
-	<!-- Start genarating Gallery -->
-	<section id="examples" class="examples-section">
-		<div class="container">
-			<div class="image-row">
-				<div class="image-set">
-					<?php 
-					$xmlFile = './config/freizeit.xml'; 
-
-						if (file_exists($xmlFile)) { 
-						    $xml = simplexml_load_file($xmlFile); 
-
-						    foreach ( $xml->image as $user )   
-							{   
-							  $text = $user->text;
-							  $url = $user->url;	
-							  $urlResize = $user->resize;
-							  echo ' <a class="example-image-link" href= '.$url.' data-lightbox="example-set" data-title= '.$text.' ><img class="example-image" src= '.$urlResize.'  alt=""/></a>';
-						    
-							}   
-							 
-						} else { 
-						    exit("Datei $xmlFile kann nicht geöffnet werden."); 
-						} 
-						?>
-					</div>
-				</div>
-			</div>
-		</section>
-	<!-- End genarating Gallery -->
+  	<?php include("gallery.php"); 
+		generateLightBoxGallery ("config/freizeit.xml");
+	?>
 
 	<h1>Freibad</h1>
 	<p>

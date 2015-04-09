@@ -28,8 +28,8 @@
 	<meta name="revisit-after" CONTENT="7 days">
 
 <!-- Kalender -->
-<script type="text/javascript" src="view.js"></script>
-<script type="text/javascript" src="calendar.js"></script>
+<script type="text/javascript" src="js/view.js"></script>
+<script type="text/javascript" src="js/calendar.js"></script>
 
 <!-- Gallery -->
  <script src="js/jquery-1.11.0.min.js"></script>

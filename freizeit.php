@@ -6,11 +6,9 @@
 		ehemaligen Residenzstadt der Reichserbmarschälle zeugen  von einer bedeutenden Vergangenheit. Burg Pappenheim (1050), St.Galluskirche (9.Jhd.), 
 		Augustiner Kloster (1372), ev. Stadtkirche(1476),  Altes Schloss (1588) und Judenfriedhof (12. Jhd.). 
 	</p>
-
-  	<?php include("gallery.php"); 
-		generateLightBoxGallery ("config/freizeit.xml");
-	?>
-
+	<!--
+		TODO: Insert Photos
+i	-->
 	<h1>Freibad</h1>
 	<p>
 		Das städtische, solarbeheizte Freibad bietet Badespaß für die ganze Familie. Auch für die ganz Kleinen wartet ein Planschbecken.

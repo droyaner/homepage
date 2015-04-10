@@ -10,11 +10,29 @@
 	$uhrzeit = date("H:i",$timestamp);
 
 	if(isset($_POST["submit"]) || isset($_POST["reset"])){
-		echo "<p> 
-			Vielen dank für ihr Interesse an unserer Ferienwohung.
-			Ihre Anfrage wird bearbeitet.
-			
-			</p>";
+
+		//clean variables
+		$nachname      = htmlentities($_GET['nachname']);
+		$vorname       = htmlentities($_GET['vorname']);
+
+		// Abreise
+		$TT1           = htmlentities($_GET['TT1']);
+		$MM1           = htmlentities($_GET['MM1']);
+		$JJJJ1         = htmlentities($_GET['JJJJ1']);
+
+		// Abreise
+		$TT2           = htmlentities($_GET['TT2']);
+		$MM2           = htmlentities($_GET['MM2']);
+		$JJJJ2         = htmlentities($_GET['JJJJ2']);
+
+		// Adresse
+		$StrHausnummer = htmlentities($_GET['StrHausnummer']);
+		$AdressZusatz  = htmlentities($_GET['AdressZusatz ']);
+		$stadt         = htmlentities($_GET['      stadt ']);
+		$bundesland    = htmlentities($_GET[' bundesland']);
+		$plz           = htmlentities($_GET['  plz ']);
+		$land          = htmlentities($_GET[' land ']);
+
 		//Daten auswerten
 		$empfaenger = "Droyaner@gmx.de"; //Mailadresse
 		$betreff    = "Buchungsanfrage: $nachname, $vorname, $datum";
@@ -26,6 +44,7 @@
 				Telefon: $telefon \n
 				Email: $email \n
 				\n
+				Adresse: \n
 				$StrHausnummer \n
 				$AdressZusatz \n
 				$stadt \n
@@ -35,15 +54,31 @@
 				\n
 				Zeitraum:
 				Anreisedatum: $TT1 $MM1 $JJJJ1 \n
-				Abreisedatum: $TT1 $MM1 $JJJJ1 \n
+				Abreisedatum: $TT2 $MM2 $JJJJ2 \n
 				\n
 				$anmerkung \n
 				";
+		// end mailtext
+
 		//$antwortan  = "ich@versuchsratte.de";
  
-		mail( $empfaenger,
+		if(mail( $empfaenger,
       		$betreff,
-      		$mailtext);
+      		$mailtext)){
+			
+		echo "<p> 
+			Vielen dank für ihr Interesse an unserer Ferienwohung.
+			Ihre Anfrage wird bearbeitet.
+			</p>";
+		}else{
+		
+		echo "<p> 
+			Ihre Anfrage konnte aus technischen Gründen nicht 
+			weitergeleitet werden. Wir bitten um Ihr Verständnis.
+			Schreiben Sie doch bitte eine E-Mail mit ihrer Anfrage
+			und informieren Sie uns über den kleinen Fehlerteufel.	
+			</p>";
+		}
       		//"From: $absEmail\nReply-To: $antwortan");
 	}else{
 ?>

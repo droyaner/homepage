@@ -14,8 +14,8 @@
 		//clean variables
 		$nachname      = htmlentities($_POST['nachname']);
 		$vorname       = htmlentities($_POST['vorname']);
-		$telefon       = htmlentities($_POST('telefon'));
-		$email         = htmlentities($_POST('email'));
+		$telefon       = htmlentities($_POST['telefon']);
+		$email         = htmlentities($_POST['email']);
 
 		// Abreise
 		$TT1           = htmlentities($_POST['TT1']);
@@ -27,6 +27,8 @@
 		$MM2           = htmlentities($_POST['MM2']);
 		$JJJJ2         = htmlentities($_POST['JJJJ2']);
 
+		// TODO check adressen
+
 		// Adresse
 		$StrHausnummer = htmlentities($_POST['StrHausnummer']);
 		$AdressZusatz  = htmlentities($_POST['AdressZusatz']);
@@ -34,54 +36,84 @@
 		$bundesland    = htmlentities($_POST['bundesland']);
 		$plz           = htmlentities($_POST['plz']);
 		$land          = htmlentities($_POST['land ']);
+		
+		$anmerkung     = htmlentities($_POST['anmerkung']);
+		
 
 		//Daten auswerten
+		/******* FOR TEST *******/
 		$empfaenger = "Droyaner@gmx.de"; //Mailadresse
+		/******* FOR BETA *******/
+		$empfaenger = "Droyaner@gmx.de,werner.treu@t-online.de";
+		/******* FOR Final *******/
+		//$empfaenger = "werner.treu@t-online.de"; 
+
 		$betreff    = "Buchungsanfrage: $nachname, $vorname, $datum";
-		$mailtext   = "Buchungsanfrage | $uhrzeit $datum \n 
-				\n
-				Kontaktdaten:
-				Vorname: $vorname \n
-				Nachname: $nachname \n
-				Telefon: $telefon \n
-				Email: $email \n
-				\n
-				Adresse: \n
-				$StrHausnummer \n
-				$AdressZusatz \n
-				$stadt \n
-				$bundesland \n
-				$plz \n
-				$land \n
-				\n
-				Zeitraum:
-				Anreisedatum: $TT1 $MM1 $JJJJ1 \n
-				Abreisedatum: $TT2 $MM2 $JJJJ2 \n
-				\n
-				$anmerkung \n
+		$mailtext   = "Buchungsanfrage: | $uhrzeit | $datum  
+\n
+Zeitraum: $TT1.$MM1.$JJJJ1 - $TT2.$MM2.$JJJJ2 
+\n
+Kontaktdaten:
+Vorname:  $vorname 
+Nachname: $nachname 
+Telefon:  $telefon 
+\n
+Email:    $email 
+\n
+Adresse: 
+$StrHausnummer 
+$AdressZusatz
+$stadt 
+$bundesland
+$plz
+$land
+\n
+Anmerkung:
+$anmerkung \n
 				";
 		// end mailtext
-
-		//$antwortan  = "ich@versuchsratte.de";
+		if(empty($email)){
  
-		if(mail( $empfaenger,
-      		$betreff,
-      		$mailtext)){
+			if(mail( $empfaenger,
+			$betreff,
+			$mailtext)){
+				
+			echo "  <p> 
+				Vielen dank für ihr Interesse an unserer Ferienwohung.
+				Ihre Anfrage wird bearbeitet.
+				</p>";
+			}else{
 			
-		echo "<p> 
-			Vielen dank für ihr Interesse an unserer Ferienwohung.
-			Ihre Anfrage wird bearbeitet.
-			</p>";
-		}else{
-		
-		echo "<p> 
-			Ihre Anfrage konnte aus technischen Gründen nicht 
-			weitergeleitet werden. Wir bitten um Ihr Verständnis.
-			Schreiben Sie doch bitte eine E-Mail mit ihrer Anfrage
-			und informieren Sie uns über den kleinen Fehlerteufel.	
-			</p>";
+			echo "  <p> 
+				Ihre Anfrage konnte aus technischen Gründen nicht 
+				weitergeleitet werden. Wir bitten um Ihr Verständnis.
+				Schreiben Sie doch bitte eine E-Mail mit ihrer Anfrage
+				und informieren Sie uns über den kleinen Fehlerteufel.	
+				</p>";
+			}
+
+
+		}else{ 
+			if(mail( $empfaenger,
+			$betreff,
+			$mailtext,
+			"From: $nachname, $vorname <$email>")){
+				
+			echo "  <p> 
+				Vielen dank für ihr Interesse an unserer Ferienwohung.
+				Ihre Anfrage wird bearbeitet.
+				</p>";
+			}else{
+			
+			echo "  <p> 
+				Ihre Anfrage konnte aus technischen Gründen nicht 
+				weitergeleitet werden. Wir bitten um Ihr Verständnis.
+				Schreiben Sie doch bitte eine E-Mail mit ihrer Anfrage
+				und informieren Sie uns über den kleinen Fehlerteufel.	
+				</p>";
+			}
 		}
-      		//"From: $absEmail\nReply-To: $antwortan");
+
 	}else{
 ?>
 	<p>
@@ -211,6 +243,11 @@
 		<div class="right">
 			<select class="element select medium" id="element_4_6" name="land"> 
 			<option value="" selected="selected"></option>
+<option value="Deutschland" >Deutschland</option>
+<option value="Österreich" >Österreich</option>
+<option value="Schweiz" >Schweiz</option>
+<option value="Holland" >Holland</option>
+<!--
 <option value="Afghanistan" >Afghanistan</option>
 <option value="Albania" >Albania</option>
 <option value="Algeria" >Algeria</option>
@@ -406,6 +443,7 @@
 <option value="Yemen" >Yemen</option>
 <option value="Zambia" >Zambia</option>
 <option value="Zimbabwe" >Zimbabwe</option>
+-->
 	
 			</select>
 		<label for="element_4_6">Land </label>

@@ -14,6 +14,8 @@
 		//clean variables
 		$nachname      = htmlentities($_POST['nachname']);
 		$vorname       = htmlentities($_POST['vorname']);
+		$telefon       = htmlentities($_POST('telefon'));
+		$email         = htmlentities($_POST('email'));
 
 		// Abreise
 		$TT1           = htmlentities($_POST['TT1']);

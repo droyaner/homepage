@@ -12,26 +12,26 @@
 	if(isset($_POST["submit"]) || isset($_POST["reset"])){
 
 		//clean variables
-		$nachname      = htmlentities($_GET['nachname']);
-		$vorname       = htmlentities($_GET['vorname']);
+		$nachname      = htmlentities($_POST['nachname']);
+		$vorname       = htmlentities($_POST['vorname']);
 
 		// Abreise
-		$TT1           = htmlentities($_GET['TT1']);
-		$MM1           = htmlentities($_GET['MM1']);
-		$JJJJ1         = htmlentities($_GET['JJJJ1']);
+		$TT1           = htmlentities($_POST['TT1']);
+		$MM1           = htmlentities($_POST['MM1']);
+		$JJJJ1         = htmlentities($_POST['JJJJ1']);
 
 		// Abreise
-		$TT2           = htmlentities($_GET['TT2']);
-		$MM2           = htmlentities($_GET['MM2']);
-		$JJJJ2         = htmlentities($_GET['JJJJ2']);
+		$TT2           = htmlentities($_POST['TT2']);
+		$MM2           = htmlentities($_POST['MM2']);
+		$JJJJ2         = htmlentities($_POST['JJJJ2']);
 
 		// Adresse
-		$StrHausnummer = htmlentities($_GET['StrHausnummer']);
-		$AdressZusatz  = htmlentities($_GET['AdressZusatz ']);
-		$stadt         = htmlentities($_GET['      stadt ']);
-		$bundesland    = htmlentities($_GET[' bundesland']);
-		$plz           = htmlentities($_GET['  plz ']);
-		$land          = htmlentities($_GET[' land ']);
+		$StrHausnummer = htmlentities($_POST['StrHausnummer']);
+		$AdressZusatz  = htmlentities($_POST['AdressZusatz']);
+		$stadt         = htmlentities($_POST['stadt']);
+		$bundesland    = htmlentities($_POST['bundesland']);
+		$plz           = htmlentities($_POST['plz']);
+		$land          = htmlentities($_POST['land ']);
 
 		//Daten auswerten
 		$empfaenger = "Droyaner@gmx.de"; //Mailadresse

@@ -9,7 +9,7 @@
 		Wir vermieten eine gemütliche <b>vier Sterne Komfort-Ferienwohnung</b> im idyllisch gelegenen Luftkurort 
 		<a href="http://www.pappenheim.de/Events.228+M54a708de802.0.html" title="Starseite der Stadt Pappenheim">Pappenheim</a> 
 	  	im Naturpark Altmühltal nahe dem fränkischen Seenland.
-	  	Erholen Sie sich in mitten in der Natur oder nehmen Sie an dem umfangreichen Freizeitangebot in und um Pappenheim teil. 
+	  	Erholen Sie sich mitten in der Natur oder nehmen Sie an dem umfangreichen Freizeitangebot in und um Pappenheim teil. 
 	</p>
 		<section id="examples" class="examples-section">
 			<div class="container">

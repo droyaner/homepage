@@ -132,7 +132,7 @@ $anmerkung \n
 		-->
 			
 					<li id="li_1" >
-		<label class="description" for="element_1">Name </label>
+		<label class="description" for="element_1">Name* </label>
 		<span>
 			<input id="element_1_1" name= "vorname" class="element text" maxlength="255" size="14" value=""required/>
 			<label>Vorname</label>
@@ -143,7 +143,7 @@ $anmerkung \n
 		</span> 
 
 		</li>		<li id="li_6" >
-		<label class="description" for="element_6">Anreisedatum </label>
+		<label class="description" for="element_6">Anreisedatum* </label>
 		<span>
 			<input id="element_6_2" name="TT1" class="element text" size="2" maxlength="2" value="" type="text"required> /
 			<label for="element_6_2">TT</label>
@@ -172,7 +172,7 @@ $anmerkung \n
 		</script>
 		 
 		</li>		<li id="li_7" >
-		<label class="description" for="element_7">Abreisedatum </label>
+		<label class="description" for="element_7">Abreisedatum* </label>
 		<span>
 			<input id="element_7_2" name="TT2" class="element text" size="2" maxlength="2" value="" type="text"required> /
 			<label for="element_7_2">TT</label>
@@ -201,14 +201,14 @@ $anmerkung \n
 		</script>
 		 
 		</li>		<li id="li_2" >
-		<label class="description" for="element_2">Telefon </label>
+		<label class="description" for="element_2">Telefon* </label>
 		<div>
 			<input id="element_2" name="telefon" class="element text medium" type="text" maxlength="255" value=""required/> 
 		</div> 
 		</li>		<li id="li_3" >
-		<label class="description" for="element_3">Email </label>
+		<label class="description" for="element_3">Email* </label>
 		<div>
-			<input id="element_3" name="email" class="element text medium" type="text" maxlength="255" value=""/> 
+			<input id="element_3" name="email" class="element text medium" type="text" maxlength="255" value=""required/> 
 		</div> 
 		</li>		<li id="li_4" >
 		<label class="description" for="element_4">Adresse </label>

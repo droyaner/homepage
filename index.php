@@ -11,14 +11,14 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" >
 <html>
 <head>
-	<title>Ferienwohnung Treu</title>
+	<title>Ferienwohnung Pappenheim - Treu</title>
 
         <meta charset="UTF-8">
         <meta name="keywords" content="Naturpark Altmühltal, Seenland">
 	<meta name="language" content="de">
 	<meta name="keywords" content="Pappenheim,Ferienwohnung,Franken">
 	<!-- nicht mehr als 255 Zeichen -->
-	<meta name="description" content="Die schöne, abgeschlossene und harmonisch eingerichtete Ferienwohnung im Erdgeschoß liegt
+	<meta name="description" content="Ferienwohnung Pappenheim - Die schöne, abgeschlossene und harmonisch eingerichtete Ferienwohnung im Erdgeschoß liegt
 					  am Waldrand von Pappenheim. Sie besteht aus Wohnküche, Wohnzimmer mit direktem Zugang zu überdachter Terrasse 
 					  und Garten, Schlafzimmer, Dusche und WC">
 	<meta name="robots" content="index,follow">

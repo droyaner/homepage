@@ -72,46 +72,31 @@ Anmerkung:
 $anmerkung \n
 				";
 		// end mailtext
-		if(empty($email)){
- 
-			if(mail( $empfaenger,
-			$betreff,
-			$mailtext)){
-				
-			echo "  <p> 
-				Vielen dank für ihr Interesse an unserer Ferienwohung.
-				Ihre Anfrage wird bearbeitet.
-				</p>";
-			}else{
-			
-			echo "  <p> 
-				Ihre Anfrage konnte aus technischen Gründen nicht 
-				weitergeleitet werden. Wir bitten um Ihr Verständnis.
-				Schreiben Sie doch bitte eine E-Mail mit ihrer Anfrage
-				und informieren Sie uns über den kleinen Fehlerteufel.	
-				</p>";
-			}
+		$headers = array();
+		$headers ="MIME-Version: 1.0";
+		$headers ="Content-type: text/plain; charset=iso-8859-1";
+		$headers ="From: $nachname, $vorname <$email>";
+
+		
 
 
-		}else{ 
-			if(mail( $empfaenger,
-			$betreff,
-			$mailtext,
-			"From: $nachname, $vorname <$email>")){
-				
-			echo "  <p> 
-				Vielen dank für ihr Interesse an unserer Ferienwohung.
-				Ihre Anfrage wird bearbeitet.
-				</p>";
-			}else{
+		if(mail( $empfaenger,
+		$betreff,
+		$mailtext,
+		implode("\r\n",$headers))){
 			
-			echo "  <p> 
-				Ihre Anfrage konnte aus technischen Gründen nicht 
-				weitergeleitet werden. Wir bitten um Ihr Verständnis.
-				Schreiben Sie doch bitte eine E-Mail mit ihrer Anfrage
-				und informieren Sie uns über den kleinen Fehlerteufel.	
-				</p>";
-			}
+		echo "  <p> 
+			Vielen dank für ihr Interesse an unserer Ferienwohung.
+			Ihre Anfrage wird bearbeitet.
+			</p>";
+		}else{
+		
+		echo "  <p> 
+			Ihre Anfrage konnte aus technischen Gründen nicht 
+			weitergeleitet werden. Wir bitten um Ihr Verständnis.
+			Schreiben Sie doch bitte eine E-Mail mit ihrer Anfrage
+			und informieren Sie uns über den kleinen Fehlerteufel.	
+			</p>";
 		}
 
 	}else{

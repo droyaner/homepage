@@ -6,20 +6,24 @@ function generateLightBoxGallery ($xmlPath)
 		echo '<div class="container">';
 			echo '<div class="image-row">';
 				echo '<div class="image-set">';
-
 						if (file_exists($xmlPath)) { 
 						    $xml = simplexml_load_file($xmlPath); 
 
 						    foreach ( $xml->image as $user )   
 							{   
-							  $text = $user->text;
-							  $url = $user->url;	
+							  $text      = $user->text;
+							  $url       = $user->url;	
 							  $urlResize = $user->resize;
-							  echo ' <a class="example-image-link" href= '.$url.' data-lightbox="example-set" data-title= '.$text.' ><img class="example-image" src= '.$urlResize.'  alt=""/></a>';
+							  $alt 	     = $user->alt;
+
+							  echo ' <a class="example-image-link" href= '.$url.' data-lightbox="example-set" data-title= '.$text.' ><img class="example-image" src= '.$urlResize.'  alt='.$alt.'/></a>';
 						    
 							}   
 							 
 						} else { 
+						    echo '<p>';
+						    echo 'Dont find the xml-File';
+						    echo '</p>';
 						    exit("Datei $xmlPath kann nicht geöffnet werden."); 
 						} 
 					echo '</div>';

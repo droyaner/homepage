@@ -217,7 +217,7 @@ $anmerkung \n
 	
 		<div class="right">
 			<input id="element_4_4" name="bundesland" class="element text medium" value="" type="text">
-			<label for="element_4_4">Bundeslande </label>
+			<label for="element_4_4">Bundesland </label>
 		</div>
 	
 		<div class="left">

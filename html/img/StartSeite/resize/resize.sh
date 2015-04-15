@@ -4,5 +4,5 @@ cp ../*.jpg .
 for file in $(ls *.jpg)
 do
 echo "Resizing file " ${file}
-convert ${file} -resize 10% ${file}
+convert ${file} -resize 300x300 ${file}
 done

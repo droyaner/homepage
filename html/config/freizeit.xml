@@ -4,5 +4,6 @@
       <url>./img/freizeit/001.jpg</url>  
       <resize>./img/freizeit/resize/001.jpg</resize>
       <text>"Ich bin ein Beispieltext"</text>
+      <alt>"Füll mich auch aus!!"</alt>
    </image>  
 </images>  

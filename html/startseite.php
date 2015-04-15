@@ -11,15 +11,9 @@
 	  	im Naturpark Altmühltal nahe dem fränkischen Seenland.
 	  	Erholen Sie sich mitten in der Natur oder nehmen Sie an dem umfangreichen Freizeitangebot in und um Pappenheim teil. 
 	</p>
-		<section id="examples" class="examples-section">
-			<div class="container">
-				<div class="image-row">
-					<div class="image-set">
-						<a class="example-image-link" href="img/StartSeite/001.jpg" data-lightbox="example-set" data-title="Willkommen bei Ihrer Gasfamilie Treu"><img class="example-image" src="img/StartSeite/review/001.jpg" alt=""/></a>
-					</div>
-				</div>
-			</div>
-		</section>
+  	<?php include("gallery.php"); 
+		generateLightBoxGallery ("./config/startseite.xml");
+	?>
 	<h1>Lage</h1>
 	<p>
 		- in <b>&nbsp;7 Min.</b> erreichen Sie zu Fuss den Bahnhof, die Altmühl (Bootsanlegestelle) und den Radwanderweg<br>

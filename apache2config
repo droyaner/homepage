@@ -1,0 +1,11 @@
+
+Simply change the following files
+
+File: /etc/apache2/apache2.conf
+	<Directory /home/droy/git/homepage/html>
+
+File: /etc/apache2/sites-avalibal/000-default.conf
+	DocumentRoot /home/droy/git/homepage/html
+
+service apache2 restart 
+

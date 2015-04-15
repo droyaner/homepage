@@ -42,63 +42,61 @@
 
 		//Daten auswerten
 		/******* FOR TEST *******/
-		$empfaenger = "Droyaner@gmx.de"; //Mailadresse
+		// $empfaenger = "Droyaner@gmx.de"; //Mailadresse
 		/******* FOR BETA *******/
 		$empfaenger = "Droyaner@gmx.de,werner.treu@t-online.de";
 		/******* FOR Final *******/
 		//$empfaenger = "werner.treu@t-online.de"; 
 
-		$betreff    = "Buchungsanfrage: $nachname, $vorname, $datum";
-		$mailtext   = "Buchungsanfrage: | $uhrzeit | $datum  
-\n
-Zeitraum: $TT1.$MM1.$JJJJ1 - $TT2.$MM2.$JJJJ2 
-\n
-Kontaktdaten:
-Vorname:  $vorname 
-Nachname: $nachname 
-Telefon:  $telefon 
-\n
-Email:    $email 
-\n
-Adresse: 
-$StrHausnummer 
-$AdressZusatz
-$stadt 
-$bundesland
-$plz
-$land
-\n
-Anmerkung:
-$anmerkung \n
-				";
-		// end mailtext
-		$headers = array();
-		$headers ="MIME-Version: 1.0";
-		$headers ="Content-type: text/plain; charset=iso-8859-1";
-		$headers ="From: $nachname, $vorname <$email>";
+
+		$betreff    = "Buchungsanfrage: $uhrzeit, $datum";
+		$mailtext   = "<b>Buchungsanfrage:</b> $uhrzeit | $datum <br> <br>";
+		$mailtext  .= "<b>Zeitraum:</b> $TT1.$MM1.$JJJJ1 - $TT2.$MM2.$JJJJ2 <br> <br>";
+		$mailtext  .= "<b>Kontaktdaten:</b><br>";
+		$mailtext  .= "Vorname:  $vorname <br>";
+		$mailtext  .= "Nachname: $nachname <br>";
+		$mailtext  .= "Telefon:  $telefon <br><br>";
+		$mailtext  .= "Email:    $email <br> <br>";
+		$mailtext  .= "<b>Adresse:</b> <br>";
+		$mailtext  .= "$StrHausnummer <br>";
+		$mailtext  .= "$AdressZusatz<br>";
+		$mailtext  .= "$stadt <br>";
+		$mailtext  .= "$bundesland<br>";
+		$mailtext  .= "$plz<br>";
+		$mailtext  .= "$land<br> <br>";
+		$mailtext  .= "<b>Anmerkung:</b><br>";
+		$mailtext  .= "$anmerkung <br>";
+
+
+		// FOR UMLAUTE
+		$umlauteIn = Array("/&Atilde;&curren;/","/&Atilde;&para;/","/&Atilde;&frac14;/","/&Atilde;&bdquo;/","/&Atilde;&ndash;/","/&Atilde;&oelig;/","/&Atilde;&Yuml;/", "/\+/"); 
+		$replaceIn =  Array("&auml;","&ouml;","&uuml;","&Auml;","&Ouml;","&Uuml;","&szlig;"); 
+
+		$mailtext = preg_replace($umlauteIn, $replaceIn, $mailtext);  
+		$betreff = preg_replace($umlauteIn, $replaceIn, $betreff);  
 
 		
+		// HEADER FOR MAIL
+		//$header  = "MIME-Version: 1.0\n";
+		$header .= 'Content-Type: text/html; charset="UTF-8"'."\n";
+		$header .= "Content-Transfer-Encoding: 8bit\n";
 
 
-		if(mail( $empfaenger,
-		$betreff,
-		$mailtext,
-		implode("\r\n",$headers))){
-			
-		echo "  <p> 
-			Vielen dank für ihr Interesse an unserer Ferienwohung.
-			Ihre Anfrage wird bearbeitet.
-			</p>";
+
+
+		if(mail( $empfaenger, $betreff, $mailtext,$header)){
+			echo "  <p> 
+				Vielen dank für ihr Interesse an unserer Ferienwohung.
+				Ihre Anfrage wird bearbeitet.
+				</p>";
 		}else{
-		
-		echo "  <p> 
-			Ihre Anfrage konnte aus technischen Gründen nicht 
-			weitergeleitet werden. Wir bitten um Ihr Verständnis.
-			Schreiben Sie doch bitte eine E-Mail mit ihrer Anfrage
-			und informieren Sie uns über den kleinen Fehlerteufel.	
-			</p>";
+			echo "  <p> 
+				Ihre Anfrage konnte aus technischen Gründen nicht 
+				weitergeleitet werden. Wir bitten um Ihr Verständnis.
+				Schreiben Sie doch bitte eine E-Mail mit ihrer Anfrage
+				und informieren Sie uns über den kleinen Fehlerteufel.	
+				</p>";
 		}
-
 	}else{
 ?>
 	<p>

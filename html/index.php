@@ -8,8 +8,10 @@
 ?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" >
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<html>
 <head>
+<body>
 	<title>Ferienwohnung Pappenheim - Treu</title>
 
         <meta charset="UTF-8">
@@ -23,7 +25,6 @@
 	<meta name="robots" content="index,follow">
 	<meta name="audience" content="alle">
 	<meta name="page-topic" content="Tourismus">
-	<meta http-equiv="expires" content="Mon, 05 Apr 2015 00:00:00 GMT">
 	<meta name="revisit-after" CONTENT="7 days">
 
 <!-- Kalender -->
@@ -49,7 +50,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Karla%7CMontserrat:700">
-<meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
 <link href="./css/style.css" rel="stylesheet" type="text/css" />
 <link rel="stylesheet" href="css/lightbox.css">
 

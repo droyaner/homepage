@@ -12,7 +12,7 @@
 	  	Erholen Sie sich mitten in der Natur oder nehmen Sie an dem umfangreichen Freizeitangebot in und um Pappenheim teil. 
 	</p>
   	<?php include("gallery.php"); 
-		generateLightBoxGallery ("./config/startseite.xml");
+		generateLightBoxGalleryStart ("./config/startseite.xml");
 	?>
 	<h1>Lage</h1>
 	<p>
@@ -23,7 +23,7 @@
 	</p>
 
 	<blockquote>
-		<p align="center">
+		<p>
 			Wir freuen uns Sie auf unserer neuen Seite Willkommen zu heißen. Alles wurde komplett überarbeitet nur 
 			unsere Preise sind gleich geblieben. 
 		</p>

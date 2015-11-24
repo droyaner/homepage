@@ -1,4 +1,14 @@
 
+
+
+iframe {
+width: 640px;
+height: 360px;
+margin: 0 auto;
+display:block;
+background-color: #777;
+}
+
 body {
 margin : 0;
 padding : 0;
@@ -170,6 +180,7 @@ padding-left : 15px;
 margin : 0 15px 0 5px;
 } 
 blockquote {
+text-align: center;
 font-weight : bold;
 font-style : italic;
 color : #b29b35;
@@ -215,6 +226,16 @@ cursor:pointer;
 			/*PIC-MOUSEACTION*/
 .example-image {
 width: 7rem;
+-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+-ms-border-radius: 5px;
+-o-border-radius: 5px;
+border-radius: 5px;
+}
+
+
+.example-image-start {
+width: 22rem;
 -webkit-border-radius: 5px;
 -moz-border-radius: 5px;
 -ms-border-radius: 5px;

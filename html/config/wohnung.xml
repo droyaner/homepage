@@ -1,56 +1,56 @@
 <?xml version='1.0'?>  
 <images>  
    <image id='001'>  
-      <url>./img/wohnung/001.jpg</url>  
-      <resize>./img/wohnung/resize/001.jpg</resize>
+      <url>"./img/wohnung/001.jpg"</url>  
+      <resize>"./img/wohnung/resize/001.jpg"</resize>
       <text>"Herzlich Willkommen"</text>
       <alt>"Eingang zur Ferienwohnung"</alt>
    </image>  
    <image id='002'>  
-      <url>./img/wohnung/002.jpg</url>  
-      <resize>./img/wohnung/resize/002.jpg</resize>
+      <url>"./img/wohnung/002.jpg"</url>  
+      <resize>"./img/wohnung/resize/002.jpg"</resize>
       <text>"Infozentrum"</text>  
       <alt>"Infozentrum unserer Ferienwohnung"</alt>
    </image> 
    <image id='003'>  
-      <url>./img/wohnung/003.jpg</url>  
-      <resize>./img/wohnung/resize/003.jpg</resize>
+      <url>"./img/wohnung/003.jpg"</url>  
+      <resize>"./img/wohnung/resize/003.jpg"</resize>
       <text>"Eingangsbereich"</text>  
       <alt>"Eingangsbereich der Ferienwohung"</alt>
    </image>  
    <image id='004'>  
-      <url>./img/wohnung/004.jpg</url>  
-      <resize>./img/wohnung/resize/004.jpg</resize>
+      <url>"./img/wohnung/004.jpg"</url>  
+      <resize>"./img/wohnung/resize/004.jpg"</resize>
       <text>"Wohnzimmer"</text>  
       <alt>"Wohnzimmer mit Fernseh und Sofa und Zugang zum Garten"</alt>
    </image>  
    <image id='005'>  
-      <url>./img/wohnung/005.jpg</url>  
-      <resize>./img/wohnung/resize/005.jpg</resize>
+      <url>"./img/wohnung/005.jpg"</url>  
+      <resize>"./img/wohnung/resize/005.jpg"</resize>
       <text>"Wohnzimmer Sitzecke"</text>  
       <alt>"Wohnzimmer Sitzecke"</alt>
    </image>  
    <image id='006'>  
-      <url>./img/wohnung/006.jpg</url>  
-      <resize>./img/wohnung/resize/006.jpg</resize>
+      <url>"./img/wohnung/006.jpg"</url>  
+      <resize>"./img/wohnung/resize/006.jpg"</resize>
       <text>"Schlafzimmer"</text>  
       <alt>"Im Jahr 2014 renoviertes Schlafzimmer"</alt>
    </image>  
    <image id='007'>  
-      <url>./img/wohnung/007.jpg</url>  
-      <resize>./img/wohnung/resize/007.jpg</resize>
+      <url>"./img/wohnung/007.jpg"</url>  
+      <resize>"./img/wohnung/resize/007.jpg"</resize>
       <text>"Wohnküche"</text>  
       <alt>"Vollausgestattete Wohnküche"</alt>
    </image>  
    <image id='008'>  
-      <url>./img/wohnung/008.jpg</url>  
-      <resize>./img/wohnung/resize/008.jpg</resize>
+      <url>"./img/wohnung/008.jpg"</url>  
+      <resize>"./img/wohnung/resize/008.jpg"</resize>
       <text>"Essgruppe in Wohnküche"</text>  
       <alt>"Esstisch in der Küche"</alt>
    </image>  
    <image id='009'>  
-      <url>./img/wohnung/009.jpg</url>  
-      <resize>./img/wohnung/resize/009.jpg</resize>
+      <url>"./img/wohnung/009.jpg"</url>  
+      <resize>"./img/wohnung/resize/009.jpg"</resize>
       <text>"Badezimmer"</text>  
       <alt>"Badezimmer"</alt>
    </image>  

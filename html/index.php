@@ -57,16 +57,19 @@
 <body>
 
 
-<div class="backdrop"></div>
-<div id="container">
-  <div id="topimg">
-  </div>
-    <?php include("menu.php")?>	
-  <div style="clear:both;"></div>
+	<div class="backdrop">
+	</div>
+	<div id="container">
+	<div id="topimg">
+  	</div>
+    	<?php include("menu.php")?>	
+  	<div style="clear:both;">
+	</div>
 
-  <?php include("sites.php")?>
+  	<?php include("sites.php")?>
 
-  <?php include("footer.php"); ?>
+  	<?php include("footer.php"); ?>
+  	</div>
 
 </body>
 </html>

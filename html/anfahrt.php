@@ -5,16 +5,16 @@
 	<p>
 		<b>Tipp:</b>
 		Beim Anklicken der roten Markierung öffnet sich der Routenplaner und Sie können Ihre Anreise nach Pappenheim planen.
-		<br>
-		<br>
+		<br />
+		<br />
 	</p>
 
 	<h1>Anreise per Bahn</h1>
 
 	<p>
 		Wenn Sie mit der Bahn anreisen, holen wir Sie auf Wunsch direkt vom Bahnhof in Pappenheim ab. 
-		<br>
-		<br>
+		<br />
+		<br />
 		<b>Tipp:</b> 
 		Um Ihnen die Anreise so angenehm wie möglich zu gestalten, können Sie vorab ihr Gepäck mit
 		<a href="https://www.dhl.de/de/paket/pakete-versenden/deutschlandweit-versenden/reisegepaeck.html" title="my website">DHL</a> 

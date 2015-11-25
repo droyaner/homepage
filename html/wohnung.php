@@ -3,21 +3,21 @@
 		<p>
 			Die schöne, abgeschlossene und  harmonisch eingerichtete Ferienwohnung (75 m&sup2; für 
 			2 Personen) im Erdgeschoß liegt am Waldrand von Pappenheim.
-			<br>
+			<br />
 		</p>
 		<p>
 			- Schlafzimmer mit Doppelbett
-			<br>
+			<br />
 			- Wohnzimmer
-			<br>
+			<br />
 			- Esszimmer mit Wohnküche
-			<br>
+			<br />
 			- Bad mit Dusche
-			<br>
+			<br />
 			- Terrasse mit Gartenanteil und Liegewiese
-			<br>
+			<br />
 			- Abschließbarem Abstellraum
-			<br>
+			<br />
 			- Parkmöglichkeit direkt vor dem Haus
     </p>
   	<?php include("gallery.php"); 

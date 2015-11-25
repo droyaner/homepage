@@ -1,6 +1,3 @@
-<style>
-	.example-image { width: 22rem; }
-</style>
 
 
 <div id="content">
@@ -16,10 +13,10 @@
 	?>
 	<h1>Lage</h1>
 	<p>
-		- in <b>&nbsp;7 Min.</b> erreichen Sie zu Fuss den Bahnhof, die Altmühl (Bootsanlegestelle) und den Radwanderweg<br>
-		- in <b>10 Min.</b> erreichen Sie den Einkaufsmarkt<br>
-		- in <b>15 Min.</b> das Freibad<br>
-		- in <b>20 Min.</b> erreichen Sie die Stadtmitte entlang einer wunderschönen, alten Lindenallee.<br>
+		- in <b>&nbsp;7 Min.</b> erreichen Sie zu Fuss den Bahnhof, die Altmühl (Bootsanlegestelle) und den Radwanderweg<br />
+		- in <b>10 Min.</b> erreichen Sie den Einkaufsmarkt<br />
+		- in <b>15 Min.</b> das Freibad<br />
+		- in <b>20 Min.</b> erreichen Sie die Stadtmitte entlang einer wunderschönen, alten Lindenallee.<br />
 	</p>
 
 	<blockquote>

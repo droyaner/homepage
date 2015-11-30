@@ -13,7 +13,8 @@ function generateLightBoxGallery ($xmlPath,$site){
 
 // entweder wohnung oder start
 	echo '<!-- Start genarating Gallery -->';
-	echo '<section id="examples" class="examples-section">';
+	//echo '<section id="examples" class="examples-section">';
+	echo '<section>';
 	echo '<div class="container">';
 	echo '<div class="image-row">';
 	echo '<div class="image-set">';

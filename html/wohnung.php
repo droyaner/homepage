@@ -21,6 +21,7 @@
 			- Parkmöglichkeit direkt vor dem Haus
     </p>
   	<?php include("gallery.php"); 
-		generateLightBoxGallery ("config/wohnung.xml");
+		//generateLightBoxGallery ("config/wohnung.xml");
+		generateLightBoxGalleryWohnung ("config/wohnung.xml");
 	?>
   </div>

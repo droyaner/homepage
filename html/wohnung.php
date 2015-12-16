@@ -20,8 +20,7 @@
 			<br />
 			- Parkmöglichkeit direkt vor dem Haus
     </p>
-  	<?php include("gallery.php"); 
-		//generateLightBoxGallery ("config/wohnung.xml");
-		generateLightBoxGalleryWohnung ("config/wohnung.xml");
-	?>
-  </div>
+<?php include("gallery.php"); 
+   generateLightBoxGalleryWohnung("config/wohnung.xml");
+?>
+</div>

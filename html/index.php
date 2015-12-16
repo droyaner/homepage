@@ -1,10 +1,9 @@
 <?php
- if(isset($_GET["section"])){ 
-                $section = $_GET["section"]; 
-        }else{ 
-                $section = ""; 
-        } 
-
+if (isset($_GET["section"])) { 
+   $section = $_GET["section"]; 
+} else { 
+   $section = ""; 
+} 
 ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">

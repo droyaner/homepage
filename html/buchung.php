@@ -12,7 +12,6 @@ $uhrzeit = date("H:i", $timestamp);
 if (isset($_POST["submit"]) || isset($_POST["reset"])) {
 
    //clean variables
-   /*
    $nachname      = utf8_decode(htmlentities($_POST['nachname']));
    $vorname       = utf8_decode(htmlentities($_POST['vorname']));
    $telefon       = utf8_decode(htmlentities($_POST['telefon']));
@@ -39,33 +38,6 @@ if (isset($_POST["submit"]) || isset($_POST["reset"])) {
    $land          = utf8_decode(htmlentities($_POST['land ']));
    
    $anmerkung     = utf8_decode(htmlentities($_POST['anmerkung']));
-   */
-   $nachname      = htmlentities($_POST['nachname'], ENT_COMPAT, 'UTF-8');
-   $vorname       = htmlentities($_POST['vorname']);
-   $telefon       = htmlentities($_POST['telefon']);
-   $email         = htmlentities($_POST['email']);
-   
-   // Abreise
-   $TT1           = htmlentities($_POST['TT1']);
-   $MM1           = htmlentities($_POST['MM1']);
-   $JJJJ1         = htmlentities($_POST['JJJJ1']);
-   
-   // Abreise
-   $TT2           = htmlentities($_POST['TT2']);
-   $MM2           = htmlentities($_POST['MM2']);
-   $JJJJ2         = htmlentities($_POST['JJJJ2']);
-   
-   // TODO check adressen
-   
-   // Adresse
-   $strHausnummer = htmlentities($_POST['strHausnummer']);
-   $adressZusatz  = htmlentities($_POST['adressZusatz']);
-   $stadt         = htmlentities($_POST['stadt']);
-   $bundesland    = htmlentities($_POST['bundesland']);
-   $plz           = htmlentities($_POST['plz']);
-   $land          = htmlentities($_POST['land ']);
-   
-   $anmerkung     = htmlentities($_POST['anmerkung']);
    
    
    //Daten auswerten
@@ -78,7 +50,6 @@ if (isset($_POST["submit"]) || isset($_POST["reset"])) {
    
    
    $betreff    = "Buchungsanfrage: $uhrzeit, $datum";
-   /*
    $mailtext   = "<b>Buchungsanfrage:</b> $uhrzeit | $datum <br> <br>";
    $mailtext  .= "<b>Zeitraum:</b> $TT1.$MM1.$JJJJ1 - $TT2.$MM2.$JJJJ2 <br> <br>";
    $mailtext  .= "<b>Kontaktdaten:</b><br>";
@@ -95,58 +66,25 @@ if (isset($_POST["submit"]) || isset($_POST["reset"])) {
    $mailtext  .= "$land<br> <br>";
    $mailtext  .= "<b>Anmerkung:</b><br>";
    $mailtext  .= "$anmerkung <br>";
-   */
-   $mailtext   = "Buchungsanfrage: $uhrzeit | $datum  \n";
-   $mailtext  .= "Zeitraum: $TT1.$MM1.$JJJJ1 - $TT2.$MM2.$JJJJ2 \n";
-   $mailtext  .= "Kontaktdaten:\n";
-   $mailtext  .= "Vorname:  $vorname \n";
-   $mailtext  .= "Nachname: $nachname \n";
-   $mailtext  .= "Telefon:  $telefon \n";
-   $mailtext  .= "Email:    $email \n";
-   $mailtext  .= "Adresse: \n";
-   $mailtext  .= "$strHausnummer \n";
-   $mailtext  .= "$adressZusatz\n";
-   $mailtext  .= "$stadt \n";
-   $mailtext  .= "$bundesland\n";
-   $mailtext  .= "$plz\n";
-   $mailtext  .= "$land\n";
-   $mailtext  .= "Anmerkung:\n";
-   $mailtext  .= "NÄchste täast:\n";
-   $mailtext  .= "$anmerkung \n";
 
 
    // FOR UMLAUTE
    //$umlauteIn = Array("/&Atilde;&curren;/","/&Atilde;&para;/","/&Atilde;&frac14;/",
-                      //"/&Atilde;&bdquo;/","/&Atilde;&ndash;/","/&Atilde;&oelig;/","/&Atilde;&Yuml;/", "/\+/");
+    //                  "/&Atilde;&bdquo;/","/&Atilde;&ndash;/","/&Atilde;&oelig;/","/&Atilde;&Yuml;/", "/\+/");
    //$replaceIn =  Array("&auml;","&ouml;","&uuml;","&Auml;","&Ouml;","&Uuml;","&szlig;"); 
 
    //$mailtext = preg_replace($umlauteIn, $replaceIn, $mailtext);  
    //$betreff = preg_replace($umlauteIn, $replaceIn, $betreff);  
 
    // HEADER FOR MAIL
-   /*
-   $header  = "MIME-Version: 1.0\n";
-   $header .= 'Content-Type: text/html; charset="UTF-8"'."\n";
-   $header .= "Content-Transfer-Encoding: 8bit\n";
-    */
-
-   $headers   = array();
-   //$headers[] = "MIME-Version: 1.0";
-   //$headers[] = "Content-type: text/plain; charset=iso-8859-1";
-   //$headers[] = "MIME-Version: 1.0";
-   //$headers[] = 'Content-Type: text/plain; charset="UTF-8"'."";
-   $headers[] = "Mime-Version: 1.0";
-   $headers[] = "Content-Type: text/plain;charset=utf-8";
-   //$headers[] = "Content-Transfer-Encoding: quoted-printable";
-   $headers[] = "Content-Transfer-Encoding: quoted-printable";
-   //$headers[] = "Content-Transfer-Encoding: 8bit";
-   //$headers[] = "Content-type: text/plain; charset=iso-8859-1";
-   $headers[] = "From:Ferienwohnung<info@Ferienwohnung-Treu.de>";
+   //$header  = "MIME-Version: 1.0\n";
+   //$header .= 'Content-Type: text/html; charset="UTF-8"'."\n";
+   //$header .= "Content-Transfer-Encoding: 8bit\n";
+   $header = "From:Ferienwohnung<info@Ferienwohnung-Treu.de>\n";
 
 
 
-   //if (mail($empfaenger, $betreff, $mailtext, $header)) {
-   if (mail($empfaenger, $betreff, $mailtext, implode("\r\n", $headers))) {
+   if (mail($empfaenger, $betreff, $mailtext, $header)) {
       echo "  <p> 
               Vielen dank für ihr Interesse an unserer Ferienwohung.
               Ihre Anfrage wird bearbeitet.

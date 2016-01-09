@@ -69,17 +69,19 @@ if (isset($_POST["submit"]) || isset($_POST["reset"])) {
 
 
    // FOR UMLAUTE
-   $umlauteIn = Array("/&Atilde;&curren;/","/&Atilde;&para;/","/&Atilde;&frac14;/",
-                      "/&Atilde;&bdquo;/","/&Atilde;&ndash;/","/&Atilde;&oelig;/","/&Atilde;&Yuml;/", "/\+/");
-   $replaceIn =  Array("&auml;","&ouml;","&uuml;","&Auml;","&Ouml;","&Uuml;","&szlig;"); 
+   //$umlauteIn = Array("/&Atilde;&curren;/","/&Atilde;&para;/","/&Atilde;&frac14;/",
+    //                  "/&Atilde;&bdquo;/","/&Atilde;&ndash;/","/&Atilde;&oelig;/","/&Atilde;&Yuml;/", "/\+/");
+   //$replaceIn =  Array("&auml;","&ouml;","&uuml;","&Auml;","&Ouml;","&Uuml;","&szlig;"); 
 
-   $mailtext = preg_replace($umlauteIn, $replaceIn, $mailtext);  
-   $betreff = preg_replace($umlauteIn, $replaceIn, $betreff);  
+   //$mailtext = preg_replace($umlauteIn, $replaceIn, $mailtext);  
+   //$betreff = preg_replace($umlauteIn, $replaceIn, $betreff);  
 
    // HEADER FOR MAIL
    //$header  = "MIME-Version: 1.0\n";
-   $header .= 'Content-Type: text/html; charset="UTF-8"'."\n";
-   $header .= "Content-Transfer-Encoding: 8bit\n";
+   //$header .= 'Content-Type: text/html; charset="UTF-8"'."\n";
+   //$header .= "Content-Transfer-Encoding: 8bit\n";
+   $header = "From:Ferienwohnung<info@Ferienwohnung-Treu.de>\n";
+
 
 
    if (mail($empfaenger, $betreff, $mailtext, $header)) {

@@ -12,39 +12,39 @@ $uhrzeit = date("H:i", $timestamp);
 if (isset($_POST["submit"]) || isset($_POST["reset"])) {
 
    //clean variables
-   $nachname      = htmlentities($_POST['nachname']);
-   $vorname       = htmlentities($_POST['vorname']);
-   $telefon       = htmlentities($_POST['telefon']);
-   $email         = htmlentities($_POST['email']);
+   $nachname      = utf8_decode(htmlentities($_POST['nachname']));
+   $vorname       = utf8_decode(htmlentities($_POST['vorname']));
+   $telefon       = utf8_decode(htmlentities($_POST['telefon']));
+   $email         = utf8_decode(htmlentities($_POST['email']));
    
    // Abreise
-   $TT1           = htmlentities($_POST['TT1']);
-   $MM1           = htmlentities($_POST['MM1']);
-   $JJJJ1         = htmlentities($_POST['JJJJ1']);
+   $TT1           = utf8_decode(htmlentities($_POST['TT1']));
+   $MM1           = utf8_decode(htmlentities($_POST['MM1']));
+   $JJJJ1         = utf8_decode(htmlentities($_POST['JJJJ1']));
    
    // Abreise
-   $TT2           = htmlentities($_POST['TT2']);
-   $MM2           = htmlentities($_POST['MM2']);
-   $JJJJ2         = htmlentities($_POST['JJJJ2']);
+   $TT2           = utf8_decode(htmlentities($_POST['TT2']));
+   $MM2           = utf8_decode(htmlentities($_POST['MM2']));
+   $JJJJ2         = utf8_decode(htmlentities($_POST['JJJJ2']));
    
    // TODO check adressen
    
    // Adresse
-   $strHausnummer = htmlentities($_POST['strHausnummer']);
-   $adressZusatz  = htmlentities($_POST['adressZusatz']);
-   $stadt         = htmlentities($_POST['stadt']);
-   $bundesland    = htmlentities($_POST['bundesland']);
-   $plz           = htmlentities($_POST['plz']);
-   $land          = htmlentities($_POST['land ']);
+   $strHausnummer = utf8_decode(htmlentities($_POST['strHausnummer']));
+   $adressZusatz  = utf8_decode(htmlentities($_POST['adressZusatz']));
+   $stadt         = utf8_decode(htmlentities($_POST['stadt']));
+   $bundesland    = utf8_decode(htmlentities($_POST['bundesland']));
+   $plz           = utf8_decode(htmlentities($_POST['plz']));
+   $land          = utf8_decode(htmlentities($_POST['land ']));
    
-   $anmerkung     = htmlentities($_POST['anmerkung']);
+   $anmerkung     = utf8_decode(htmlentities($_POST['anmerkung']));
    
    
    //Daten auswerten
    /******* FOR TEST *******/
-   // $empfaenger = "Droyaner@gmx.de"; //Mailadresse
+   $empfaenger = "Droyaner@gmx.de"; //Mailadresse
    /******* FOR BETA *******/
-   $empfaenger = "Droyaner@gmx.de,werner.treu@t-online.de";
+   //$empfaenger = "Droyaner@gmx.de,werner.treu@t-online.de";
    /******* FOR Final *******/
    //$empfaenger = "werner.treu@t-online.de"; 
    
@@ -69,7 +69,8 @@ if (isset($_POST["submit"]) || isset($_POST["reset"])) {
 
 
    // FOR UMLAUTE
-   $umlauteIn = Array("/&Atilde;&curren;/","/&Atilde;&para;/","/&Atilde;&frac14;/","/&Atilde;&bdquo;/","/&Atilde;&ndash;/","/&Atilde;&oelig;/","/&Atilde;&Yuml;/", "/\+/");
+   $umlauteIn = Array("/&Atilde;&curren;/","/&Atilde;&para;/","/&Atilde;&frac14;/",
+                      "/&Atilde;&bdquo;/","/&Atilde;&ndash;/","/&Atilde;&oelig;/","/&Atilde;&Yuml;/", "/\+/");
    $replaceIn =  Array("&auml;","&ouml;","&uuml;","&Auml;","&Ouml;","&Uuml;","&szlig;"); 
 
    $mailtext = preg_replace($umlauteIn, $replaceIn, $mailtext);  

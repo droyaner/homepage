@@ -12,76 +12,93 @@ $uhrzeit = date("H:i", $timestamp);
 if (isset($_POST["submit"]) || isset($_POST["reset"])) {
 
    //clean variables
-   $nachname      = htmlentities($_POST['nachname']);
-   $vorname       = htmlentities($_POST['vorname']);
-   $telefon       = htmlentities($_POST['telefon']);
-   $email         = htmlentities($_POST['email']);
+   $nachname      = utf8_decode($_POST['nachname']);
+   $vorname       = utf8_decode($_POST['vorname']);
+   $telefon       = utf8_decode($_POST['telefon']);
+   $email         = utf8_decode($_POST['email']);
+   
    
    // Abreise
-   $TT1           = htmlentities($_POST['TT1']);
-   $MM1           = htmlentities($_POST['MM1']);
-   $JJJJ1         = htmlentities($_POST['JJJJ1']);
+   $TT1           = utf8_decode($_POST['TT1']);
+   $MM1           = utf8_decode($_POST['MM1']);
+   $JJJJ1         = utf8_decode($_POST['JJJJ1']);
    
    // Abreise
-   $TT2           = htmlentities($_POST['TT2']);
-   $MM2           = htmlentities($_POST['MM2']);
-   $JJJJ2         = htmlentities($_POST['JJJJ2']);
-   
-   // TODO check adressen
+   $TT2           = utf8_decode($_POST['TT2']);
+   $MM2           = utf8_decode($_POST['MM2']);
+   $JJJJ2         = utf8_decode($_POST['JJJJ2']);
    
    // Adresse
-   $strHausnummer = htmlentities($_POST['strHausnummer']);
-   $adressZusatz  = htmlentities($_POST['adressZusatz']);
-   $stadt         = htmlentities($_POST['stadt']);
-   $bundesland    = htmlentities($_POST['bundesland']);
-   $plz           = htmlentities($_POST['plz']);
-   $land          = htmlentities($_POST['land ']);
+   $strHausnummer = utf8_decode($_POST['strHausnummer']);
+   $adressZusatz  = utf8_decode($_POST['adressZusatz']);
+   $stadt         = utf8_decode($_POST['stadt']);
+   $bundesland    = utf8_decode($_POST['bundesland']);
+   $plz           = utf8_decode($_POST['plz']);
+   $land          = utf8_decode($_POST['land ']);
    
-   $anmerkung     = htmlentities($_POST['anmerkung']);
+   $anmerkung     = utf8_decode($_POST['anmerkung']);
    
    
    //Daten auswerten
    /******* FOR TEST *******/
-   // $empfaenger = "Droyaner@gmx.de"; //Mailadresse
+   $empfaenger = "Droyaner@gmx.de"; //Mailadresse
+   //$empfaenger = "marcus.treu@fau.de"; //Mailadresse
    /******* FOR BETA *******/
-   $empfaenger = "Droyaner@gmx.de,werner.treu@t-online.de";
+   //$empfaenger = "Droyaner@gmx.de,werner.treu@t-online.de";
    /******* FOR Final *******/
    //$empfaenger = "werner.treu@t-online.de"; 
    
    
    $betreff    = "Buchungsanfrage: $uhrzeit, $datum";
-   $mailtext   = "<b>Buchungsanfrage:</b> $uhrzeit | $datum <br> <br>";
-   $mailtext  .= "<b>Zeitraum:</b> $TT1.$MM1.$JJJJ1 - $TT2.$MM2.$JJJJ2 <br> <br>";
-   $mailtext  .= "<b>Kontaktdaten:</b><br>";
-   $mailtext  .= "Vorname:  $vorname <br>";
-   $mailtext  .= "Nachname: $nachname <br>";
-   $mailtext  .= "Telefon:  $telefon <br><br>";
-   $mailtext  .= "Email:    $email <br> <br>";
-   $mailtext  .= "<b>Adresse:</b> <br>";
-   $mailtext  .= "$strHausnummer <br>";
-   $mailtext  .= "$adressZusatz<br>";
-   $mailtext  .= "$stadt <br>";
-   $mailtext  .= "$bundesland<br>";
-   $mailtext  .= "$plz<br>";
-   $mailtext  .= "$land<br> <br>";
-   $mailtext  .= "<b>Anmerkung:</b><br>";
-   $mailtext  .= "$anmerkung <br>";
+
+   $mailtext   = "Buchungsanfrage: $uhrzeit | $datum \n\n";
+   $mailtext  .= "Zeitraum: $TT1.$MM1.$JJJJ1 - $TT2.$MM2.$JJJJ2\n\n";
+   $mailtext  .= "Kontaktdaten:\n";
+   $mailtext  .= "Vorname:  $vorname\n ";
+   $mailtext  .= "Nachname: $nachname\n ";
+   if (empty($telefon)) {
+      $mailtext  .= "Telefon:  $telefon\n ";
+   }
+   $mailtext  .= "Email:    $email\n\n";
+   if (!empty($strHausnummer) || !empty($adressZusatz) || !empty($stadt) ||
+       !empty($bundesland) || !empty($plz) || !empty($land)) {
+      $mailtext  .= "Adresse:\n";
+      if (!empty($strHausnummer)) {
+         $mailtext  .= "$strHausnummer\n ";
+      }
+      if (!empty($adressZusatz)) {
+         $mailtext  .= "$adressZusatz\n";
+      }
+      if (!empty($stadt)) {
+         $mailtext  .= "$stadt\n ";
+      }
+      if (!empty($bundesland)) {
+         $mailtext  .= "$bundesland\n";
+      }
+      if (!empty($plz)) {
+         $mailtext  .= "$plz\n";
+      }
+      if (!empty($land)) {
+         $mailtext  .= "$land\n";
+      }
+   }
+   if (!empty($anmerkung)) {
+      $mailtext  .= "\nAnmerkung:\n";
+      $mailtext  .= "$anmerkung\n ";
+   }
 
 
-   // FOR UMLAUTE
-   $umlauteIn = Array("/&Atilde;&curren;/","/&Atilde;&para;/","/&Atilde;&frac14;/","/&Atilde;&bdquo;/","/&Atilde;&ndash;/","/&Atilde;&oelig;/","/&Atilde;&Yuml;/", "/\+/");
-   $replaceIn =  Array("&auml;","&ouml;","&uuml;","&Auml;","&Ouml;","&Uuml;","&szlig;"); 
-
-   $mailtext = preg_replace($umlauteIn, $replaceIn, $mailtext);  
-   $betreff = preg_replace($umlauteIn, $replaceIn, $betreff);  
-
-   // HEADER FOR MAIL
-   //$header  = "MIME-Version: 1.0\n";
-   $header .= 'Content-Type: text/html; charset="UTF-8"'."\n";
-   $header .= "Content-Transfer-Encoding: 8bit\n";
+   $headers   = array();
+   $headers[] = "Mime-Version: 1.0";
+   //$headers[] = "Content-Type: text/plain; charset=utf-8";
+   $headers[] = "Content-Type: text/plain; charset=iso-8859-1";
+   $headers[] = "Content-Transfer-Encoding: quoted-printable";
+   $headers[] = "From: $vorname $nachname <$email>";
+   $headers[] = "X-Mailer: PHP/".phpversion();
+   
 
 
-   if (mail($empfaenger, $betreff, $mailtext, $header)) {
+   if (mail($empfaenger, $betreff, $mailtext, implode("\r\n", $headers))) {
       echo "  <p> 
               Vielen dank für ihr Interesse an unserer Ferienwohung.
               Ihre Anfrage wird bearbeitet.

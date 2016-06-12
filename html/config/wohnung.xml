@@ -54,34 +54,4 @@
       <text>"Badezimmer"</text>  
       <alt>"Badezimmer"</alt>
    </image>  
-   <image id='010'>  
-      <url>"./img/wohnung/010.jpg"</url>  
-      <resize>"./img/wohnung/resize/010.jpg"</resize>
-      <text>"TODO"</text>  
-      <alt>"TODO"</alt>
-   </image>  
-   <image id='011'>  
-      <url>"./img/wohnung/011.jpg"</url>  
-      <resize>"./img/wohnung/resize/011.jpg"</resize>
-      <text>"TODO"</text>  
-      <alt>"TODO"</alt>
-   </image>  
-   <image id='012'>  
-      <url>"./img/wohnung/012.jpg"</url>  
-      <resize>"./img/wohnung/resize/012.jpg"</resize>
-      <text>"TODO"</text>  
-      <alt>"TODO"</alt>
-   </image>  
-   <image id='013'>  
-      <url>"./img/wohnung/013.jpg"</url>  
-      <resize>"./img/wohnung/resize/013.jpg"</resize>
-      <text>"TODO"</text>  
-      <alt>"TODO"</alt>
-   </image>  
-   <image id='014'>  
-      <url>"./img/wohnung/014.jpg"</url>  
-      <resize>"./img/wohnung/resize/014.jpg"</resize>
-      <text>"TODO"</text>  
-      <alt>"TODO"</alt>
-   </image>  
 </images>  

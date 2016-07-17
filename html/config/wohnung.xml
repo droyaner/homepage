@@ -51,6 +51,12 @@
    <image id='009'>  
       <url>"./img/wohnung/009.jpg"</url>  
       <resize>"./img/wohnung/resize/009.jpg"</resize>
+      <text>"Terrasse"</text>  
+      <alt>"Terrasse"</alt>
+   </image>  
+   <image id='010'>  
+      <url>"./img/wohnung/010.jpg"</url>  
+      <resize>"./img/wohnung/resize/010.jpg"</resize>
       <text>"Badezimmer"</text>  
       <alt>"Badezimmer"</alt>
    </image>  

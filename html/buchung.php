@@ -42,11 +42,10 @@ if (isset($_POST["submit"]) || isset($_POST["reset"])) {
    //Daten auswerten
    /******* FOR TEST *******/
    //$empfaenger = "Droyaner@gmx.de"; //Mailadresse
-   //$empfaenger = "marcus.treu@fau.de"; //Mailadresse
    /******* FOR BETA *******/
-   $empfaenger = "Droyaner@gmx.de,werner.treu@t-online.de";
+   $empfaenger = "Droyaner@gmx.de,werner.treu@gmx.net";
    /******* FOR Final *******/
-   //$empfaenger = "werner.treu@t-online.de"; 
+   //$empfaenger = "werner.treu@gmx.net"; 
    
    
    $betreff    = "Buchungsanfrage: $uhrzeit, $datum";

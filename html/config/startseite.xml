@@ -1,8 +1,8 @@
 <?xml version='1.0'?>  
 <images>  
    <image id='001'>  
-      <url>"./img/StartSeite/001.jpg"</url>  
-      <resize>"./img/StartSeite/resize/001.jpg"</resize>
+      <url>"./img/StartSeite/002.jpg"</url>  
+      <resize>"./img/StartSeite/resize/002.jpg"</resize>
       <text>"Willkommen bei Ihrer Gastfamilie Treu"</text>
       <alt>"Ferienhaus aus Sicht der Straße"</alt>
    </image>  

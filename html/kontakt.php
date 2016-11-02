@@ -9,7 +9,7 @@
 		<br />
 		<br />
 		<b>E-Mail:&nbsp;&nbsp;</b> 
-		<a href="mailto:werner.treu@t-online.de">werner.treu@t-online.de</a><br />
+		<a href="mailto:werner.treu@gmx.net">werner.treu@gmx.net</a><br />
 		<b>Telefon:</b> 09143/1795 <br />
 		<b>Handy:</b> &nbsp;&nbsp;0162/7461088 <br />
 		<br />

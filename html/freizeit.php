@@ -62,7 +62,7 @@ i	-->
 	<h1>Burg Pappenheim</h1>
 	<p>
 		Romantische Burg zu Pappenheim mit neu angelegtem botanischem Garten, Naturkundemuseum und natürlich Folterkammer.
-		<a href="http://www.grafschaft-pappenheim.de/burg-pappenheim.34.0.html" title="my website">Mehr</a> 
+		<a href="http://grafschaft-pappenheim.de/burg/burgplan/" title="my website">Mehr</a> 
 	</p>
 
 	<h1>Eichstätt</h1>

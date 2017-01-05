@@ -1,7 +1,7 @@
 
   <div id="content">
    <h1>Unsere Ferienwohnung </h1>
-	<h2><p align="center">Preis: <br />37,00 &euro; für 2 Personen pro Tag  <br /> Die Preise sind Endpreise ab 7 Belegtagen</p></h2>
+	<h2><p align="center">Preis: <br />39,00 &euro; für 2 Personen pro Tag  <br /> Die Preise sind Endpreise ab 7 Belegtagen</p></h2>
 <p>
 <br />
 <b>Hol- und Bringservice:</b> <br />

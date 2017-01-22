@@ -43,7 +43,7 @@ if (isset($_POST["submit"]) || isset($_POST["reset"])) {
    /******* FOR TEST *******/
    //$empfaenger = "Droyaner@gmx.de"; //Mailadresse
    /******* FOR BETA *******/
-   $empfaenger = "Droyaner@gmx.de,werner.treu@gmx.net";
+   $empfaenger = "marcus.treu@mail.de,werner.treu@gmx.net";
    /******* FOR Final *******/
    //$empfaenger = "werner.treu@gmx.net"; 
    

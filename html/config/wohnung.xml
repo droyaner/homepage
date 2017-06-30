@@ -60,10 +60,4 @@
       <text>"Badezimmer"</text>  
       <alt>"Badezimmer"</alt>
    </image>  
-   <image id='011'>  
-      <url>"./img/wohnung/011.jpg"</url>  
-      <resize>"./img/wohnung/resize/011.jpg"</resize>
-      <text>"Fahrräder"</text>  
-      <alt>"Fahrräder"</alt>
-   </image>  
 </images>  

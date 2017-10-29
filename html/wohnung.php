@@ -19,6 +19,8 @@
 			- Abschließbarem Abstellraum
 			<br />
 			- Parkmöglichkeit direkt vor dem Haus
+			<br />
+			- <strong> Neu: </strong> Für die Dauer Ihres Aufenthaltes stehen Ihnen zwei Winora Tourenräder kostenlos zur Verfügung
     </p>
 <?php include("gallery.php"); 
    generateLightBoxGalleryWohnung("config/wohnung.xml");

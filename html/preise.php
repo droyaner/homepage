@@ -13,9 +13,6 @@ Wir kaufen für Sie Lebensmittel ein, damit der Kühlschrank schon zu Urlaubsbeg
 <b>Getränkeservice:</b> <br />
 Bei uns können Sie Getränke ordern. Bitte hierzu Getränkeliste anfordern.<br />
 <br />
-<b>Reinigungsservice:</b> <br />
-Auf Wunsch reinigen wir bei einem mehrwöchigen Aufenthalt die Wohnung einmal wöchentlich.<br />
-<br />
 <b>WLAN:</b> <br />
 Für die Dauer ihres Aufenthalts stellen wir Ihnen gerne WLAN zu Verfügung.<br />
 <br />

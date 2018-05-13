@@ -19,7 +19,7 @@ i	-->
 	<p>
 		Das städtische, solarbeheizte Freibad bietet Badespaß für die ganze Familie. Auch für die ganz Kleinen wartet ein Planschbecken.
 		Außerdem werden Schwimm- und Tauchkurse sowie Erlebnistage für Kinder angeboten.
-		<a href="http://www.pappenheim.de/Freibad-Pappenheim.255.0.html" title="my website">Mehr</a> 
+		<a href="http://stadtwerke.pappenheim.eu/freibad-pappenheim/" title="my website">Mehr</a> 
 	</p>
 
 	<h1>Steinbrüche</h1>
@@ -29,7 +29,7 @@ i	-->
 		<a href="http://de.wikipedia.org/wiki/Archaeopteryx" title="my website">Archeopteryx</a> 
 		gefunden. Bei einem Ausflug in einen dieser Touristen-Steinbrüche finden Sie sicher eine kleine Versteinerung
 		die Sie gerne mit nach Hause nehmen dürfen.
-		<a href="http://www.pappenheim.de/Fossilien-in-Solnhofen.262.0.html" title="my website">Mehr</a> 
+		<a href="http://www.solnhofen-fossilienatlas.de/" title="my website">Mehr</a> 
 	</p>
 
 	<h1>Radtouren</h1>
@@ -56,7 +56,7 @@ i	-->
 	<h1>Mal- und Töpferkurse</h1>
 	<p>
 		Unsere Pappenheimer Künstlerin Birgit van der Gang lädt Sie gerne in ihr Atelier ein. Im Urlaub Töpfern oder Malen,
-		dass wäre doch was!
+		das wäre doch was!
 	</p>
 
 	<h1>Burg Pappenheim</h1>

@@ -21,8 +21,7 @@
 
 	<blockquote>
 		<p>
-			Wir freuen uns Sie auf unserer neuen Seite Willkommen zu heißen. Alles wurde komplett überarbeitet nur 
-			unsere Preise sind gleich geblieben. 
+			Wir freuen uns Sie auf unserer neuen Seite Willkommen zu heißen.
 		</p>
 	</blockquote>
 </div>
